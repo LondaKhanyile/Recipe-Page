@@ -1,3 +1,59 @@
+/* Mobile */
+@media (max-width: 480px) {
+  .site-header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  #logo {
+      font-size: 1rem;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+  }
+
+  .nav-item {
+      padding: 8px;
+  }
+
+  .hero-content {
+      height: 40vh;
+      padding: 0 10px;
+  }
+
+  .hero-heading {
+      font-size: 2rem;
+  }
+
+  .hero-description {
+      font-size: 0.9rem;
+  }
+
+  .hero-btn {
+      padding: 6px 12px;
+  }
+
+  .recipe-intro {
+      margin: 16px;
+  }
+
+  .section-title {
+      font-size: 20px;
+  }
+
+  .ingredients-group {
+      margin-left: 8px;
+  }
+
+  .ingredients-list {
+      font-size: 0.9rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
