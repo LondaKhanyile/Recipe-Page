@@ -19,6 +19,7 @@
   flex-direction: column;
   align-items: center; /* Center the logo text */
   font-family: 'Matemasie';
+  font-size: 28px;
 }
 
 .nav-links {
@@ -33,49 +34,76 @@
 
 .nav-item {
   text-decoration: none;
-  color: black;
-  font-family: 'Edu VIC WA NT Beginner';
+  color: #333;
+  font-family: 'Edu VIC WA NT Beginner', sans-serif;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #e9ecef;
 }
 
 .hero-content {
   position: relative;
-  background-image: url(BCC\ Hero.png);
+  background-image: url('BCC Hero.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   height: 65vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: #fff;
-  flex-direction: column;
-  border-radius: 0px 0px 8px 8px;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.300); /* Adjust the opacity for the darkness */
+  z-index: -1; /* Ensure the overlay is behind the content */
 }
 
 .hero-heading {
-  font-family: 'Edu VIC WA NT Beginner';
+  font-family: 'Edu VIC WA NT Beginner', sans-serif;
   font-size: 3rem;
-  margin: 10px;
+  margin-bottom: 10px;
+  z-index: 2; /* Bring the content in front of the overlay */
 }
 
 .hero-description {
-  font-family: 'Outfit';
+  font-family: 'Outfit', sans-serif;
   margin-top: 20px;
+  font-size: 1.2rem;
+  z-index: 2; /* Bring the content in front of the overlay */
 }
 
 .hero-btn {
-  position: relative;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 10px 20px;
-  border: solid 1px;
-  border-radius: 4px;
-  color: #fff;
-  background-color: #ffffff00;
-  font-size: 16px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-family: 'Outfit';
+  font-family: 'Outfit', sans-serif;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 2; /* Bring the content in front of the overlay */
 }
+
+.hero-btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
 
 p {
   font-family: 'Outfit';
@@ -144,16 +172,21 @@ ol li {
 }
 
 .footer-link {
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  font-family: 'Outfit';
-  display: flex;
-  color: black;
-  margin-bottom: 10px;
+  font-family: 'Outfit', sans-serif;
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #007bff;
 }
 
 .site-footer {
+  padding: 20px;
+  background-color: #f8f9fa;
+  text-align: center;
   margin-bottom: 20px;
 }
 
